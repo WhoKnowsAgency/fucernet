@@ -41,7 +41,11 @@ export default async function ({ app, route }) {
   }
 
   try {
-    const { token } = await $axios.$get(options.endpoints.refreshToken.url);
+    const { token } = await $axios.$get(options.endpoints.refreshToken.url, {
+      headers: {
+        Authorization: `${$auth.getToken("local")}`,
+      },
+    });
     if (refreshToken !== token) {
       console.log("Los refresh token no coinciden. Deslogueando...");
       console.log(refreshToken + " !== " + token);
