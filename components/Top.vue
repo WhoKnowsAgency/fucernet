@@ -95,6 +95,14 @@
             </li>
             <li>
               <nuxt-link
+                :tag="$route.name === 'separata' ? 'span' : 'a'"
+                :to="{ name: 'separata' }"
+              >
+                Separata Anual de Normas
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link
                 :tag="$route.name === 'configuracion' ? 'span' : 'a'"
                 :to="{ name: 'configuracion' }"
               >
@@ -113,8 +121,9 @@
               <a
                 href="https://www.dnrpa.gov.ar/Digesto-Automotor/digesto.php"
                 target="_blank"
-                >Digesto</a
               >
+                Digesto
+              </a>
             </li>
             <li v-if="$auth.loggedIn">
               <a href="#" @click="logout()" @keyup.enter="logout()"

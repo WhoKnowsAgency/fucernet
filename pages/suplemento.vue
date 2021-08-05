@@ -9,6 +9,81 @@
             <div class="main">
               <h4 ref="pageFocusTarget">
                 <a
+                  href="https://mailchi.mp/a908bab1e358/suplemento-registral-fucernet-5527737"
+                  target="_blank"
+                  >Suplemento Registral Nro. 12
+                </a>
+              </h4>
+              <!-- <p><a href="">bajada</a></p> -->
+            </div>
+            <div class="extra">
+              <small><a>Mayo 2021</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://mailchi.mp/2097e02114c3/suplemento-registral-fucernet-11"
+                  target="_blank"
+                  >Suplemento Registral Nro. 11</a
+                >
+              </h4>
+              <!-- <p><a href="">bajada</a></p> -->
+            </div>
+            <div class="extra">
+              <small><a>Abril 2021</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://mailchi.mp/4c290b32aab3/suplemento-registral-fucernet-1446509"
+                  target="_blank"
+                  >Suplemento Registral Nro. 10</a
+                >
+              </h4>
+              <!-- <p><a href="">bajada</a></p> -->
+            </div>
+            <div class="extra">
+              <small><a>Marzo 2021</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://mailchi.mp/ffff5a5be2b1/suplemento-registral-fucernet-1442053"
+                  target="_blank"
+                  >Suplemento Registral Nro. 9</a
+                >
+              </h4>
+              <!-- <p><a href="">bajada</a></p> -->
+            </div>
+            <div class="extra">
+              <small><a>Febrero 2021</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://mailchi.mp/57076fc7917b/suplemento-registral-fucernet-1437645"
+                  target="_blank"
+                  >Suplemento Registral Nro. 8</a
+                >
+              </h4>
+              <!-- <p><a href="">bajada</a></p> -->
+            </div>
+            <div class="extra">
+              <small><a>Enero 2021</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
                   href="https://mailchi.mp/32734d9eecba/suplemento-registral-fucernet-1433885"
                   target="_blank"
                   >Suplemento Registral Nro. 7</a

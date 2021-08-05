@@ -23,3 +23,6 @@ backstop_data/html_report/*
 cypress.env.json
 cypress/screenshots/*
 cypress/videos/*
+
+.DS_Store
+DS.Store
