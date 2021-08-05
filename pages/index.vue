@@ -118,7 +118,7 @@
               src="~/assets/img/logo-fucernet.svg"
               alt="FucerNet"
             />
-            <span>2020 - Fundación Centro de Estudios Registrales</span>
+            <span>2021 - Fundación Centro de Estudios Registrales</span>
           </div>
           <div class="footer-info_menu">
             <ul>
