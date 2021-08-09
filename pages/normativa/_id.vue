@@ -149,8 +149,9 @@ export default {
     async fetchNormativa() {
       try {
         await this.$store.dispatch("normativas/getById", this.$route.params.id);
-        this.normativa =
-          this.$store.state.normativas.byId[this.$route.params.id];
+        this.normativa = this.$store.state.normativas.byId[
+          this.$route.params.id
+        ];
       } catch (e) {
         console.log(e);
         if (process.client && !window.navigator.onLine) {
