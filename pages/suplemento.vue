@@ -9,6 +9,51 @@
             <div class="main">
               <h4 ref="pageFocusTarget">
                 <a
+                  href="https://mailchi.mp/4cd24cc89342/suplemento-registral-fucernet-5535861"
+                  target="_blank"
+                  >Suplemento Registral Nro. 15</a
+                >
+              </h4>
+              <!-- <p><a href="">bajada</a></p> -->
+            </div>
+            <div class="extra">
+              <small><a>Agosto 2021</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://mailchi.mp/a8f122bf5aaa/suplemento-registral-fucernet-5533373?e=4e780d1ef6"
+                  target="_blank"
+                  >Suplemento Registral Nro. 14</a
+                >
+              </h4>
+              <!-- <p><a href="">bajada</a></p> -->
+            </div>
+            <div class="extra">
+              <small><a>Julio 2021</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://mailchi.mp/ccb11eba3017/suplemento-registral-fucernet-5530813"
+                  target="_blank"
+                  >Suplemento Registral Nro. 13
+                </a>
+              </h4>
+              <!-- <p><a href="">bajada</a></p> -->
+            </div>
+            <div class="extra">
+              <small><a>Junio 2021</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
                   href="https://mailchi.mp/a908bab1e358/suplemento-registral-fucernet-5527737"
                   target="_blank"
                   >Suplemento Registral Nro. 12
