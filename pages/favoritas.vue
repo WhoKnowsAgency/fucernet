@@ -1,21 +1,21 @@
 <template>
   <div class="favoritas">
-    <Alerta/>
-  	<Top
-      :title="title"
-    />
+    <Alerta />
+    <Top :title="title" />
     <main id="contenido" class="band">
       <div class="container">
-        <span class="small__heading">Aquí verá las normativas que marcó como favoritas</span>
-        <div class="normativas-container" ref="pageFocusTarget">
+        <span class="small__heading"
+          >Aquí verá las normativas que marcó como favoritas</span
+        >
+        <div ref="pageFocusTarget" class="normativas-container">
           <ModuloNormativa
             v-for="normativa in favoritas"
-            :key="normativa.id + '-ultima'"
             :id="normativa.id"
+            :key="normativa.id + '-ultima'"
             :titulo="normativa.titulo"
             :bajada="normativa.bajada"
             :categoria="normativa.categoria"
-            :categoriaUri="normativa.categoria_uri"
+            :categoria-uri="normativa.categoria_uri"
             :fecha="normativa.fecha"
             :url="normativa.url"
           />
@@ -26,42 +26,45 @@
 </template>
 
 <script>
-import Top from '~/components/Top.vue'
-import Alerta from '~/components/Alerta.vue'
-import ModuloNormativa from '~/components/ModuloNormativa.vue'
-import { mapGetters } from 'vuex'
+import Top from "~/components/Top.vue";
+import Alerta from "~/components/Alerta.vue";
+import ModuloNormativa from "~/components/ModuloNormativa.vue";
+import { mapGetters } from "vuex";
 
 export default {
-  layout: 'app',
+  layout: "app",
   components: {
     Top,
     Alerta,
-    ModuloNormativa
+    ModuloNormativa,
   },
-  middleware: 'premium',
-  data () {
+  middleware: "premium",
+  data() {
     return {
-      title: 'Favoritas'
-    }
+      title: "Favoritas",
+    };
   },
   computed: {
-    ...mapGetters('normativas', ['favoritas']),
+    ...mapGetters("normativas", ["favoritas"]),
   },
-  beforeRouteEnter (to, from, next) {
-    next(vm => {
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      if (!process.client) return;
       vm.$announcer.set(
         `${vm.title} ${vm.$announcer.options.complementRoute}`,
         vm.$announcer.options.politeness
-      )
-      vm.$utils.moveFocus(vm.$refs.pageFocusTarget)
-    })
+      );
+      vm.$utils.moveFocus(vm.$refs.pageFocusTarget);
+    });
   },
-  head () {
+  head() {
     return {
       title: this.title,
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
-<style lang="sass">@import 'sass/pages/favoritas.sass'</style>
+<style lang="sass">
+@import 'sass/pages/favoritas.sass'
+</style>

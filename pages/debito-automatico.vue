@@ -1,103 +1,109 @@
 <template>
   <main id="contenido" class="registro">
     <SecondaryTop
-      :nroPaso="nroPaso"
-      :tituloPaso="tituloPaso"
       ref="pageFocusTarget"
+      :nro-paso="nroPaso"
+      :titulo-paso="tituloPaso"
     />
     <div class="band form__container">
       <div class="container">
-
         <mensaje :tipo="mensajeTipo" :texto="mensajeTexto" />
 
-        <form method="post" @submit.prevent="suscribir" class="main__form">
-          <fieldset>
-            <label for="cbu">CBU</label>
-            <input
-              type="text"
-              v-model.lazy="cbu"
-              id="cbu"
-              ref="cbu"
-              name="cbu"
-              v-validate="'required'"
-              data-vv-as="CBU"
-              :class="{'error': errors.has('cbu') }"
-            />
-            <span class="error" v-show="errors.has('cbu')">
-              {{ errors.first('cbu') }}
-            </span>
-          </fieldset>
+        <form method="post" class="main__form" @submit.prevent="suscribir">
+          <template v-if="completado">
+            <p>
+              ¡Hola, {{ this.$auth.user.nombre }}! Ya puede acceder a sus 15
+              días de prueba. Recuerde que no le cobraremos ningún cargo hasta
+              dentro de 15 días. Si desea cancelar la suscripción antes del
+              primer pago, puede hacerlo desde Configuración.
+            </p>
+            <br /><br />
+          </template>
 
-          <fieldset>
-            <label for="cuit">CUIT</label>
-            <input
-              type="text"
-              v-model.lazy="cuit"
-              id="cuit"
-              ref="cuit"
-              name="cuit"
-              v-validate="'required'"
-              data-vv-as="CUIT"
-              :class="{'error': errors.has('cuit') }"
-            />
-            <span class="error" v-show="errors.has('cuit')">
-              {{ errors.first('cuit') }}
-            </span>
-          </fieldset>
+          <template v-else>
+            <fieldset>
+              <label for="cbu">CBU</label>
+              <input
+                id="cbu"
+                ref="cbu"
+                v-model.lazy="cbu"
+                v-validate="'required'"
+                type="text"
+                name="cbu"
+                data-vv-as="CBU"
+                :class="{ error: errors.has('cbu') }"
+              />
+              <span v-show="errors.has('cbu')" class="error">
+                {{ errors.first("cbu") }}
+              </span>
+            </fieldset>
 
-          <fieldset>
-            <label for="rs">Código RS</label>
-            <input
-              type="text"
-              v-model.lazy="rs"
-              id="rs"
-              ref="rs"
-              name="rs"
-              v-validate="'required'"
-              data-vv-as="Código RS"
-              :class="{'error': errors.has('rs') }"
-            />
-            <span class="error" v-show="errors.has('rs')">
-              {{ errors.first('rs') }}
-            </span>
-          </fieldset>
+            <fieldset>
+              <label for="cuit">CUIT</label>
+              <input
+                id="cuit"
+                ref="cuit"
+                v-model.lazy="cuit"
+                v-validate="'required'"
+                type="text"
+                name="cuit"
+                data-vv-as="CUIT"
+                :class="{ error: errors.has('cuit') }"
+              />
+              <span v-show="errors.has('cuit')" class="error">
+                {{ errors.first("cuit") }}
+              </span>
+            </fieldset>
 
-          <fieldset>
-            <label for="nombre">Nombre</label>
-            <input
-              type="text"
-              v-model.lazy="nombre"
-              id="nombre"
-              ref="nombre"
-              name="nombre"
-              data-vv-as="Nombre"
-              v-validate="'required'"
-              :class="{'error': errors.has('nombre') }"
-            />
-            <span class="error" v-show="errors.has('nombre')">
-              {{ errors.first('nombre') }}
-            </span>
-          </fieldset>
+            <fieldset>
+              <label for="rs">Código RS (si lo hubiera)</label>
+              <input
+                id="rs"
+                ref="rs"
+                v-model.lazy="rs"
+                type="text"
+                name="rs"
+                :class="{ error: errors.has('rs') }"
+              />
+            </fieldset>
 
-          <fieldset>
-            <label for="apellido">Apellido</label>
-            <input
-              type="text"
-              v-model.lazy="apellido"
-              id="apellido"
-              ref="apellido"
-              name="apellido"
-              data-vv-as="Apellido"
-              v-validate="'required'"
-              :class="{'error': errors.has('apellido') }"
-            />
-            <span class="error" v-show="errors.has('apellido')">
-              {{ errors.first('apellido') }}
-            </span>
-          </fieldset>
+            <fieldset>
+              <label for="nombre">Nombre</label>
+              <input
+                id="nombre"
+                ref="nombre"
+                v-model.lazy="nombre"
+                v-validate="'required'"
+                type="text"
+                name="nombre"
+                data-vv-as="Nombre"
+                :class="{ error: errors.has('nombre') }"
+              />
+              <span v-show="errors.has('nombre')" class="error">
+                {{ errors.first("nombre") }}
+              </span>
+            </fieldset>
 
-          <button type="submit" class="rounded__btn--full blue">
-            {{ txtBtnSubmit}}
+            <fieldset>
+              <label for="apellido">Apellido</label>
+              <input
+                id="apellido"
+                ref="apellido"
+                v-model.lazy="apellido"
+                v-validate="'required'"
+                type="text"
+                name="apellido"
+                data-vv-as="Apellido"
+                :class="{ error: errors.has('apellido') }"
+              />
+              <span v-show="errors.has('apellido')" class="error">
+                {{ errors.first("apellido") }}
+              </span>
+            </fieldset>
+          </template>
+
+          <button type="submit" class="rounded__btn--full green">
+            {{ txtBtnSubmit }}
           </button>
         </form>
       </div>
@@ -106,78 +112,86 @@
 </template>
 
 <script>
-import SecondaryTop from '~/components/SecondaryTop.vue'
-import { mapState, mapActions } from 'vuex'
-import mensaje from '~/mixins/mensaje'
+import SecondaryTop from "~/components/SecondaryTop.vue";
+import { mapState, mapActions } from "vuex";
+import mensaje from "~/mixins/mensaje";
 
 export default {
-  layout: 'signup',
-  mixins: [mensaje],
+  layout: "signup",
   components: {
-    SecondaryTop
+    SecondaryTop,
   },
+  mixins: [mensaje],
   data() {
     return {
-      title: 'Paso 3 - Débito automático',
-      nroPaso: '3',
-      tituloPaso: 'Configure el débito automático',
-      cuit: '',
-      rs: '',
-      cbu: '',
-      nombre: '',
-      apellido: '',
-    }
+      title: "Paso 3 - Débito automático",
+      nroPaso: "3",
+      tituloPaso: "Configure el débito automático",
+      cuit: "",
+      rs: "",
+      cbu: "",
+      nombre: "",
+      apellido: "",
+      completado: false,
+    };
   },
 
   computed: {
-    ...mapState([
-      'pagina'
-    ]),
-    txtBtnSubmit () {
-      return this.pagina.cargando ? 'Cargando...' : 'Siguiente'
+    ...mapState(["pagina"]),
+    txtBtnSubmit() {
+      if (this.completado) {
+        return "Continuar";
+      }
+      return this.pagina.cargando ? "Cargando..." : "Siguiente";
     },
   },
 
-  beforeRouteEnter (to, from, next) {
-    next(vm => {
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      if (!process.client) return;
       vm.$announcer.set(
         `${vm.title} ${vm.$announcer.options.complementRoute}`,
         vm.$announcer.options.politeness
-      )
-      vm.$utils.moveFocus(vm.$refs.pageFocusTarget.$el)
-    })
+      );
+      vm.$utils.moveFocus(vm.$refs.pageFocusTarget.$el);
+    });
   },
 
   methods: {
-    ...mapActions([
-      'setPaginaCargando'
-    ]),
+    ...mapActions(["setPaginaCargando"]),
 
-    async suscribir (event) {
-      let valida = await this.$validator.validateAll()
-      if (!valida) {
-        return
+    async suscribir() {
+      if (this.completado) {
+        await this.$router.push({
+          name: "inicio",
+        });
       }
 
+      let valida = await this.$validator.validateAll();
+      if (!valida) {
+        return;
+      }
+
+      this.setPaginaCargando(true);
       try {
-        await this.$axios.$post('suscripciones', {
-          tipo: 'debito',
+        await this.$axios.$post("suscripciones", {
+          tipo: "debito",
           datos: {
             cuit: this.cuit,
             rs: this.rs,
             cbu: this.cbu,
             nombre: this.nombre,
             apellido: this.apellido,
-          }
-        })
-        await this.$auth.fetchUser()
-        this.$router.push({
-          name: 'inicio'
-        })
-      } catch(error) {
-        this.setMensaje(error, 'error')
+          },
+        });
+        await this.$auth.fetchUser();
+        this.setPaginaCargando(false);
+        this.completado = true;
+      } catch (error) {
+        this.setMensaje(error, "error");
+        this.setPaginaCargando(false);
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>

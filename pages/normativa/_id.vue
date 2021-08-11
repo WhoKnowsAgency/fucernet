@@ -5,51 +5,65 @@
       <div class="container">
         <a
           href="#"
-          @click.prevent="$router.go(-1)"
-          @keyup.enter.prevent="$router.go(-1)"
           class="volver-btn"
-        ><img src="~/assets/img/arrow-left.svg" alt="" class="arrow-left">
+          @click.prevent="volver"
+          @keyup.enter.prevent="volver"
+          ><img src="~/assets/img/arrow-left.svg" alt="" class="arrow-left" />
           <span>Volver</span>
         </a>
         <FavoriteStar
-          :aria-label="(enFavoritos ? 'Quitar de' : 'Agregar a')+ ' favoritos'"
+          :aria-label="(enFavoritos ? 'Quitar de' : 'Agregar a') + ' favoritos'"
           tabindex="0"
-          @click.native="toggleFavorito(id)"
-          @keyup.native.enter="toggleFavorito(id)"
           :activa="enFavoritos"
+          @click.native="toggleFavorito(normativa.id)"
+          @keyup.native.enter="toggleFavorito(normativa.id)"
         />
       </div>
     </nav>
     <main id="contenido">
-    <section class="top">
-      <div class="container">
-        <h1 ref="pageFocusTarget">
-          <small v-if="categoria" :class="`tag normativa__tag ${categoriaUri}`">{{ categoria }}</small>
-          <div>{{ titulo }}</div>
-        </h1>
-        <h2>{{ bajada }}</h2>
-        <time v-if="fecha" :datetime="fecha | fecha('yyyy-MM-dd')">{{ fecha | fecha('dd/MM/yyyy') }}</time>
-      </div>
-    </section>
-    <section class="band cuerpo">
+      <section class="top">
+        <div class="container">
+          <h1 ref="pageFocusTarget">
+            <small
+              v-if="normativa.categoria"
+              :class="`tag normativa__tag ${normativa.categoriaUri}`"
+              >{{ normativa.categoria }}</small
+            >
+            <div>{{ normativa.titulo }}</div>
+          </h1>
+          <h2>{{ normativa.bajada }}</h2>
+          <time
+            v-if="normativa.fecha"
+            :datetime="normativa.fecha | fecha('yyyy-MM-dd')"
+            >{{ normativa.fecha | fecha("dd/MM/yyyy") }}</time
+          >
+        </div>
+      </section>
+      <section class="band cuerpo">
         <div class="container">
           <div v-if="!pagina.cargando">
             <h6>Introducción</h6>
-            <span v-if="autor">Por {{ autor }}</span>
-            <div v-if="intro" v-html="intro"></div>
-            <button
-              class="rounded__btn--medium green"
+            <span v-if="normativa.autor">Por {{ normativa.autor }}</span>
+            <template v-if="normativa.intro">
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <div v-html="normativa.intro" />
+            </template>
+            <a
               ref="btnLeer"
-              @click="leerNormativa"
-              @keyup.enter="leerNormativa"
-            >Leer</button>
-            <div id="contenido-normativa" :class="'cuerpo__principal' + (mostrarCuerpo ? ' active' : '')">
+              href="#contenido-normativa"
+              class="rounded__btn--medium green"
+              @click.prevent="leerNormativa"
+              @keyup.enter.prevent="leerNormativa"
+              >Leer</a
+            >
+            <div
+              id="contenido-normativa"
+              :class="'cuerpo__principal' + (mostrarCuerpo ? ' active' : '')"
+            >
               <focus-trap
                 :active="mostrarCuerpo"
                 :initial-focus="() => $refs.btnCerrar"
-                :returnFocusOnDeactivate="false"
-                v-on:activate="leerNormativa"
-                v-on:deactivate="cerrarNormativa"
+                :return-focus-on-deactivate="false"
               >
                 <div>
                   <button
@@ -57,17 +71,18 @@
                     class="cerrar"
                     @click="cerrarNormativa"
                     @keyup.enter="cerrarNormativa"
-                  >Cerrar</button>
-                  <h1>{{ titulo }}</h1>
-                  <h2>{{ bajada }}</h2>
-                  <div v-html="cuerpo"></div>
+                  >
+                    Cerrar
+                  </button>
+                  <h1>{{ normativa.titulo }}</h1>
+                  <h2>{{ normativa.bajada }}</h2>
+                  <!-- eslint-disable-next-line vue/no-v-html -->
+                  <div v-html="normativa.cuerpo" />
                 </div>
               </focus-trap>
             </div>
           </div>
-          <div v-else>
-            Cargando...
-          </div>
+          <div v-else>Cargando...</div>
         </div>
       </section>
     </main>
@@ -75,88 +90,116 @@
 </template>
 
 <script>
-import Alerta from '~/components/Alerta.vue'
-import FavoriteStar from '~/components/FavoriteStar.vue'
-import { mapState, mapActions } from 'vuex'
+import Alerta from "~/components/Alerta.vue";
+import FavoriteStar from "~/components/FavoriteStar.vue";
+import { mapState, mapActions } from "vuex";
 
 export default {
   components: {
     Alerta,
-    FavoriteStar
+    FavoriteStar,
   },
-  middleware: 'premium',
-  async asyncData ({app: {router, store}, params}) {
-    try {
-      await store.dispatch('normativas/getById', params.id)
-      return store.state.normativas.byId[params.id]
-    } catch (e) {
-      if (!window.navigator.onLine){
-        const cache = await caches.open('fucer-api')
-        const match = cache.match(`/api/normativas/id/${params.id}`) 
-        if (match) {
-          return match.json()
-        }
-        router.push({name: 'offline'})
-      } else {
-        router.push({name: '404'})
-      }
-    }
+  middleware: "premium",
+  async fetch() {
+    if (!this.$route.params.id) return;
+    await this.fetchNormativa();
   },
-  data () {
+  data() {
     return {
-      id: 0,
-      title: '',
-      titulo: '',
-      bajada: '',
-      autor: '',
-      categoria: '',
-      categoriaUri: '',
-      fecha: '',
-      intro: '',
-      cuerpo: '',
-      url: '',
-      mostrarCuerpo: false
-    }
+      fromRoute: null,
+      mostrarCuerpo: false,
+      normativa: {
+        id: 0,
+        titulo: "",
+        bajada: "",
+        autor: "",
+        categoria: "",
+        categoriaUri: "",
+        fecha: "",
+        intro: "",
+        cuerpo: "",
+        url: "",
+      },
+    };
   },
   computed: {
-    ...mapState(['pagina']),
+    ...mapState(["pagina"]),
     enFavoritos() {
-      return this.$store.getters['normativas/enFavoritos'](this.id)
-    }
+      return this.$store.getters["normativas/enFavoritos"](this.normativa.id);
+    },
   },
-  beforeRouteEnter (to, from, next) {
-    next(vm => {
-      if(to.name !== from.name){
-        vm.$utils.moveFocus(vm.$refs.pageFocusTarget)
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      if (!process.client) return;
+      vm.fromRoute = from;
+      if (to.name !== from.name) {
+        vm.$utils.moveFocus(vm.$refs.pageFocusTarget);
       }
-    })
+    });
   },
-  created () {
+  async created() {
+    if (!process.client) return;
+    await this.fetchNormativa();
     this.$announcer.set(
-      `${this.titulo} ${this.$announcer.options.complementRoute}`,
+      `${this.normativa.titulo} ${this.$announcer.options.complementRoute}`,
       this.$announcer.options.politeness
-    )
-  },
-  head () {
-    return {
-      title: this.titulo,
-    }
+    );
   },
   methods: {
-    leerNormativa (e) {
-      this.mostrarCuerpo = true
-      this.$router.push({hash: 'contenido-normativa'})
+    async fetchNormativa() {
+      try {
+        await this.$store.dispatch("normativas/getById", this.$route.params.id);
+        this.normativa = this.$store.state.normativas.byId[
+          this.$route.params.id
+        ];
+      } catch (e) {
+        console.log(e);
+        if (process.client && !window.navigator.onLine) {
+          const cache = await caches.open("fucer-api");
+          const match = cache.match(
+            `/api/normativas/id/${this.$route.params.id}`
+          );
+          if (match) {
+            this.normativa = match.json();
+          }
+          this.$router.push({ name: "offline" });
+        } else {
+          this.$router.push({ name: "404" });
+        }
+      }
     },
-    cerrarNormativa () {
-      this.mostrarCuerpo = false
-      this.$router.replace({ hash: '' })
-      this.$refs.btnLeer.focus()
+    leerNormativa() {
+      this.mostrarCuerpo = true;
+      if (!this.$route.hash) {
+        this.$router.replace({ hash: "#contenido-normativa" });
+      }
     },
-    ...mapActions('normativas', [
-      'toggleFavorito',
-    ]),
+    cerrarNormativa() {
+      this.mostrarCuerpo = false;
+      if (this.$route.hash) {
+        this.$router.replace({ hash: "" });
+      }
+      this.$refs.btnLeer.focus();
+    },
+    volver() {
+      if (!this.fromRoute.name) {
+        this.$router.push({
+          name: "inicio",
+        });
+      } else {
+        this.$router.back();
+      }
+    },
+    ...mapActions("normativas", ["toggleFavorito"]),
   },
-}
+  head() {
+    return {
+      title: this.normativa.titulo,
+    };
+  },
+};
 </script>
 
-<style lang="sass">@import 'sass/pages/normativa.sass'</style>
+<style lang="sass">
+@import 'sass/pages/normativa.sass'
+</style>

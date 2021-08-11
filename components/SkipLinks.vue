@@ -3,18 +3,15 @@
     <li>
       <a
         href="#menu-principal"
+        class="screen-reader-shortcut"
         @click="navegarAMenu"
         @keyup.enter="navegarAMenu"
-        class="screen-reader-shortcut"
       >
         Saltar a navegación principal
       </a>
     </li>
     <li>
-      <nuxt-link
-        :to="{hash: '#contenido'}"
-        class="screen-reader-shortcut"
-      >
+      <nuxt-link :to="{ hash: '#contenido' }" class="screen-reader-shortcut">
         Saltar a contenido principal
       </nuxt-link>
     </li>
@@ -24,13 +21,13 @@
 <script>
 export default {
   methods: {
-    navegarAMenu () {
+    navegarAMenu() {
       // Para que el menú se abra y el foco se desplace automáticamente
       // el menú tiene que estar visible antes de producirse la navegación.
-      this.$store.dispatch('setMenuActivo', true)
-    }
-  }
-}
+      this.$store.dispatch("setMenuActivo", true);
+    },
+  },
+};
 </script>
 
 <style lang="sass">

@@ -1,134 +1,156 @@
 <template>
   <main id="contenido" class="login">
-    <SecondaryTop
-      :tituloPaso="tituloPaso"
-    />
+    <SecondaryTop :titulo-paso="tituloPaso" />
     <div class="band form__container">
       <div class="container">
+        <mensaje
+          :tipo="mensajeTipo"
+          :texto="mensajeTexto"
+          data-cy="error-form"
+        />
 
-        <mensaje :tipo="mensajeTipo" :texto="mensajeTexto" />
-
-        <form @submit.prevent="login" class="main__form">
+        <form class="main__form" @submit.prevent="login">
           <fieldset>
             <label for="email">¿Cúal es su email?</label>
             <input
-              type="email"
-              name="email"
-              v-model="email"
               id="email"
               ref="pageFocusTarget"
+              v-model="email"
               v-validate="'required'"
-              :class="{'error': errors.has('email') }"
+              type="email"
+              name="email"
+              data-cy="email"
+              :class="{ error: errors.has('email') }"
               placeholder="Email"
             />
-            <span class="error" v-show="errors.has('email')">
-              {{ errors.first('email') }}
+            <span
+              v-show="errors.has('email')"
+              class="error"
+              data-cy="error-email"
+            >
+              {{ errors.first("email") }}
             </span>
-
           </fieldset>
           <fieldset>
             <label for="password">¿Cúal es su contraseña?</label>
             <input
+              id="password"
+              v-model="password"
+              v-validate="'required'"
               type="password"
               name="password"
-              v-model="password"
-              id="password"
-              v-validate="'required'"
-              :class="{'error': errors.has('password') }"
+              data-cy="password"
+              :class="{ error: errors.has('password') }"
               data-vv-as="contraseña"
               placeholder="Contraseña"
             />
-            <span class="error" v-show="errors.has('password')">
-              {{ errors.first('password') }}
+            <span
+              v-show="errors.has('password')"
+              class="error"
+              data-cy="error-password"
+            >
+              {{ errors.first("password") }}
             </span>
           </fieldset>
-          <button type="submit" class="rounded__btn--full green">
-            {{ txtBtnIngresar}}
+          <button
+            type="submit"
+            data-cy="submit"
+            class="rounded__btn--full green"
+          >
+            {{ txtBtnIngresar }}
           </button>
         </form>
-        <br>
-        <p class="signup__agregados"><nuxt-link :to="{ name: 'restaurar-clave' }">¿Olvidó su clave? <b>Haga click aquí</b></nuxt-link>.</p>
-        <p class="signup__agregados"><nuxt-link :to="{ name: 'ingrese-su-email' }">¿Registró su usuario pero no recibió el mail para activarlo? <b>Envíelo de nuevo</b></nuxt-link>.</p>
-      </div></div>
-    
+        <br />
+        <p class="signup__agregados">
+          <nuxt-link :to="{ name: 'restaurar-clave' }">
+            ¿Olvidó su clave? <b>Haga click aquí</b> </nuxt-link
+          >.
+        </p>
+        <p class="signup__agregados">
+          <nuxt-link :to="{ name: 'ingrese-su-email' }">
+            ¿Registró su usuario pero no recibió el mail para activarlo?
+            <b>Envíelo de nuevo</b> </nuxt-link
+          >.
+        </p>
+      </div>
+    </div>
   </main>
 </template>
 
 <script>
-import SecondaryTop from '~/components/SecondaryTop.vue'
-import { mapState, mapActions } from 'vuex'
-import mensaje from '~/mixins/mensaje'
+import SecondaryTop from "~/components/SecondaryTop.vue";
+import { mapState, mapActions } from "vuex";
+import mensaje from "~/mixins/mensaje";
 
 export default {
-  layout: 'signup',
-  mixins: [mensaje],
+  layout: "signup",
   components: {
-    SecondaryTop
+    SecondaryTop,
   },
+  mixins: [mensaje],
   auth: false,
-  middleware: 'guest',
+  middleware: "guest",
   data() {
     return {
-      email: '',
-      password: '',
-      title: 'Ingresar',
-      tituloPaso: 'Ingrese a FucerNet con su email'
-    }
+      email: "",
+      password: "",
+      title: "Ingresar",
+      tituloPaso: "Ingrese a FucerNet con su email",
+    };
   },
   computed: {
-    ...mapState([
-      'pagina'
-    ]),
-    txtBtnIngresar () {
-      return this.pagina.cargando ? 'Cargando...' : 'Ingresar'
-    }
+    ...mapState(["pagina"]),
+    txtBtnIngresar() {
+      return this.pagina.cargando ? "Cargando..." : "Ingresar";
+    },
   },
-  beforeRouteEnter (to, from, next) {
-    next(vm => {
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      if (!process.client) return;
       vm.$announcer.set(
         `${vm.title} ${vm.$announcer.options.complementRoute}`,
         vm.$announcer.options.politeness
-      )
-      vm.$utils.moveFocus(vm.$refs.pageFocusTarget)
-    })
+      );
+      vm.$utils.moveFocus(vm.$refs.pageFocusTarget);
+    });
   },
   mounted() {
-    this.$refs.pageFocusTarget.focus()
+    this.$refs.pageFocusTarget.focus();
   },
   methods: {
-     ...mapActions([
-      'setPaginaCargando'
-    ]),
+    ...mapActions(["setPaginaCargando"]),
     async login() {
-      let valida = await this.$validator.validateAll()
+      let valida = await this.$validator.validateAll();
       if (!valida) {
-        return
+        return;
       }
-      this.setPaginaCargando(true)
-      this.resetMensaje()
+      this.setPaginaCargando(true);
+      this.resetMensaje();
       try {
-        await this.$auth.loginWith('local', {
+        await this.$auth.loginWith("local", {
           data: {
             username: this.email,
-            password: this.password
-          }
-        })
+            password: this.password,
+          },
+        });
         const redirectTo = this.$auth.user.suscripcion.premium
-          ? 'inicio'
-          : 'medio-de-pago';
-        this.$router.push({ name: redirectTo })
-      } catch(e) {
-        this.setMensaje(e, 'error')
+          ? "inicio"
+          : "medio-de-pago";
+        this.$router.push({ name: redirectTo });
+      } catch (e) {
+        this.setMensaje(e, "error");
       }
-      this.setPaginaCargando(false)
-    }
+      this.setPaginaCargando(false);
+    },
   },
-  head () {
+  head() {
     return {
       title: this.title,
-    }
+    };
   },
-}
+};
 </script>
 
-<style lang="sass">@import 'sass/pages/login.sass'</style>
+<style lang="sass">
+@import 'sass/pages/login.sass'
+</style>

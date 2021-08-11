@@ -2,30 +2,51 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: "babel-eslint",
+  },
+  globals: {
+    $nuxt: true,
   },
   extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential',
-    'plugin:vue-a11y/recommended',
+    // https://medium.com/@gogl.alex/how-to-properly-set-up-eslint-with-prettier-for-vue-or-nuxt-in-vscode-e42532099a9c
+    "plugin:vue/recommended",
+    "plugin:vue-a11y/recommended",
+    "plugin:nuxt/recommended",
+    "plugin:cypress/recommended",
+    "eslint:recommended",
+    "plugin:json/recommended",
+    "plugin:promise/recommended",
+    "plugin:sonarjs/recommended",
+    "prettier/vue",
+    "plugin:prettier/recommended",
   ],
   plugins: [
-    // required to lint *.vue files
-    'vue',
-    'vue-a11y',
+    "sonarjs",
+    "promise",
+    "json",
+    "vue-a11y",
+    "nuxt",
+    "no-secrets",
+    "cypress",
   ],
   rules: {
+    "no-secrets/no-secrets": "error",
+    "vue/component-name-in-template-casing": ["error", "PascalCase"],
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
     // https://github.com/maranran/eslint-plugin-vue-a11y/issues/15#issuecomment-507698383
-    "vue-a11y/label-has-for": [ 2, {
-      "components": [ "label" ],
-      "required": {
-        "some": [ "nesting", "id" ]
+    "vue-a11y/label-has-for": [
+      2,
+      {
+        components: ["label"],
+        required: {
+          some: ["nesting", "id"],
+        },
+        allowChildren: false,
       },
-      "allowChildren": false
-    }]
-  }
-}
+    ],
+  },
+};
