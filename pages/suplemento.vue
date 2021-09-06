@@ -8,6 +8,18 @@
           <article class="normativa-module">
             <div class="main">
               <h4 ref="pageFocusTarget">
+                <a href="https://bit.ly/fucernet-suplemento-16" target="_blank"
+                  >Suplemento Registral Nro. 16</a
+                >
+              </h4>
+            </div>
+            <div class="extra">
+              <small><a>Septiembre 2021</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
                 <a
                   href="https://mailchi.mp/4cd24cc89342/suplemento-registral-fucernet-5535861"
                   target="_blank"
