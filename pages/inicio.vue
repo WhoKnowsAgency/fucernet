@@ -193,6 +193,54 @@
                 <small><a>Enlace externo</a></small>
               </div>
             </article>
+            <article class="normativa-module">
+              <div class="main">
+                <h4>
+                  <a
+                    href="http://servicios.infoleg.gob.ar/infolegInternet/anexos/200000-204999/200664/texact.htm"
+                    target="_blank"
+                    >UIF: Texto actualizado de Disposición DN Nº 293/2012</a
+                  >
+                </h4>
+              </div>
+              <div class="extra">
+                <small><a>Enlace externo</a></small>
+              </div>
+            </article>
+            <article class="normativa-module">
+              <div class="main">
+                <h4>
+                  <a
+                    href="http://servicios.infoleg.gob.ar/infolegInternet/anexos/200000-204999/202678/texact.htm"
+                    target="_blank"
+                    >Resolución de emolumentos</a
+                  >
+                </h4>
+              </div>
+              <div class="extra">
+                <small><a>Enlace externo</a></small>
+              </div>
+            </article>
+            <article class="normativa-module">
+              <div class="main">
+                <h4>
+                  <a
+                    href="http://servicios.infoleg.gob.ar/infolegInternet/anexos/100000-104999/103181/texact.htm"
+                    target="_blank"
+                    >Resolucíon MJ y DH Nº 238/2003</a
+                  >
+                </h4>
+                <p>
+                  <a
+                    >Concursos: procedimiento para la designación de nuevos
+                    Encargados</a
+                  >
+                </p>
+              </div>
+              <div class="extra">
+                <small><a>Enlace externo</a></small>
+              </div>
+            </article>
           </div>
           <!--         <div v-if="!cargandoNormativas" class="normativas-container">
             <template v-if="recientes.length > 0">
