@@ -8,6 +8,18 @@
           <article class="normativa-module">
             <div class="main">
               <h4 ref="pageFocusTarget">
+                <a href="https://bit.ly/fucernet-suplemento-19" target="_blank"
+                  >Suplemento Registral Nro. 19</a
+                >
+              </h4>
+            </div>
+            <div class="extra">
+              <small><a>Diciembre 2021</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
                 <a href="https://bit.ly/fucernet-suplemento-18" target="_blank"
                   >Suplemento Registral Nro. 18</a
                 >
