@@ -396,7 +396,6 @@ export default {
     ...mapActions(["setPaginaCargando"]),
     async processCardAndCreateCustomer() {
       try {
-        await this.verifyCard();
         await this.createNewCustomer();
         await this.subscribe();
 
@@ -419,62 +418,6 @@ export default {
         if (process.client)
           this.$announcer.set(this.titulo + ". " + this.error);
       }
-    },
-
-    async verifyCard() {
-      this.titulo = "Verificando tarjeta...";
-      if (process.client) this.$announcer.set(this.titulo);
-      await this.authorizePayment();
-      // https://www.mercadopago.com.ar/developers/en/api-docs/custom-checkout/webhooks/payment-status/
-      if (this.payment.status !== "authorized") {
-        this.error =
-          "No se pudo verificar que la tarjeta sea apta para hacer suscripciones. No podemos asegurarle que al vencer el plazo no pierda el acceso al contenido.";
-        if (process.client) this.$announcer.set(this.error);
-      } else {
-        await this.cancelPayment();
-      }
-    },
-
-    async authorizePayment() {
-      let minAllowedAmount = await this.getMinAllowedAmount(
-        this.paymentMethodId
-      );
-      this.payment = await this.$axios.$post(
-        "mercadopago/create-payment-authorization",
-        {
-          transaction_amount: minAllowedAmount,
-          card_token: this.cardToken,
-          payment_method_id: this.paymentMethodId,
-          email: this.email,
-        }
-      );
-    },
-
-    // Obtiene el monto mínimo para hacer una autorización
-    async getMinAllowedAmount(paymentMethodId) {
-      try {
-        let paymentMethods = await this.$api.mercadopago.getPaymentMethods({
-          id: paymentMethodId,
-        });
-        if (!paymentMethods[0]) {
-          throw new Error("No se encontró el método de pago.");
-        }
-        if (paymentMethods[0].deferred_capture == "unsupported") {
-          throw new Error(
-            "La tarjeta ingresada no soporta pagos diferidos. Para suscribirse es necesario usar una tarjeta de crédito."
-          );
-        }
-        return paymentMethods[0].payer_costs[0].min_allowed_amount;
-      } catch (e) {
-        console.log(e);
-      }
-    },
-
-    async cancelPayment() {
-      await this.$axios.$put("mercadopago/cancel-payment-authorization", {
-        payment_id: this.paymentId,
-      });
-      this.payment.status = "cancelled";
     },
 
     async createNewCustomer() {
@@ -511,16 +454,17 @@ export default {
       try {
         let token = await this.$axios.$post("mercadopago/subscribe-customer", {
           customer_id: this.customer.id,
+          card_token: this.cardToken,
         });
         // Actualizo el token de seguridad
         this.$auth.setToken("local", "Bearer " + token);
         await this.$auth.fetchUser();
       } catch (e) {
         console.log(e);
-        this.setMensaje(
-          "NO se pudo actualizar la suscripción. Vuelva a ingresar los datos de su tarjeta por favor.",
-          "error"
-        );
+        this.titulo = "Hubo un problema";
+        this.mensaje = "";
+        this.error =
+          "NO se pudo actualizar la suscripción. Vuelva a ingresar los datos de su tarjeta por favor.";
       }
     },
   },
