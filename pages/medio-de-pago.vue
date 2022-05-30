@@ -21,18 +21,27 @@
           <strong>no se le cobrará ningún cargo.</strong>
         </p>
         <nuxt-link
-          :to="{ name: 'tarjeta-de-credito' }"
-          class="rounded__btn--full green"
-        >
-          Tarjeta de Crédito
-        </nuxt-link>
-
-        <nuxt-link
           :to="{ name: 'debito-automatico' }"
           class="rounded__btn--full green"
         >
           Débito automático
         </nuxt-link>
+
+        <button
+          type="button"
+          :to="{ name: 'tarjeta-de-credito' }"
+          style="cursor: default; opacity: 0.5"
+          class="rounded__btn--full green"
+          disabled="disabled"
+          title="No disponible temporalmente"
+        >
+          Tarjeta de Crédito
+        </button>
+
+        <p style="margin-top: -17px">
+          <small>No disponible temporalmente.</small>
+        </p>
+
         <div v-if="$auth.loggedIn">
           <span class="signup__agregados"
             >¿Quiere iniciar con otra cuenta?
