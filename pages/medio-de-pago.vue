@@ -27,20 +27,13 @@
           Débito automático
         </nuxt-link>
 
-        <button
+        <nuxt-link
           type="button"
           :to="{ name: 'tarjeta-de-credito' }"
-          style="cursor: default; opacity: 0.5"
           class="rounded__btn--full green"
-          disabled="disabled"
-          title="No disponible temporalmente"
         >
           Tarjeta de Crédito
-        </button>
-
-        <p style="margin-top: -17px">
-          <small>No disponible temporalmente.</small>
-        </p>
+        </nuxt-link>
 
         <div v-if="$auth.loggedIn">
           <span class="signup__agregados"
