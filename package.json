@@ -71,7 +71,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
     "eslint-plugin-vue-a11y": "0.0.31",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nuxt-purgecss": "^1.0.0",
     "pre-commit": "^1.2.2",
     "prettier": "^2.0.5",
