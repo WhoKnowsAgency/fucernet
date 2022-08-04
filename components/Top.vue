@@ -95,6 +95,14 @@
             </li>
             <li>
               <nuxt-link
+                :tag="$route.name === 'dictamenes' ? 'span' : 'a'"
+                :to="{ name: 'dictamenes' }"
+              >
+                Dictámenes AAERPA
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link
                 :tag="$route.name === 'separata' ? 'span' : 'a'"
                 :to="{ name: 'separata' }"
               >
