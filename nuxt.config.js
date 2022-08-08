@@ -168,11 +168,24 @@ export default {
 
   modules: ["@nuxtjs/auth", "@nuxtjs/axios", "nuxt-webfontloader"],
 
-  axios: {
-    baseURL: `${
-      process.env.DEPLOY_PRIME_URL || "https://net.fucer.com.ar"
-    }/api/`,
-  },
+  axios:
+    process.env.NODE_ENV === "development"
+      ? {
+          proxy: true,
+          prefix: "api/",
+        }
+      : {
+          baseURL: `${
+            process.env.DEPLOY_PRIME_URL || "https://net.fucer.com.ar"
+          }/api/`,
+        },
+
+  proxy:
+    process.env.NODE_ENV === "development"
+      ? {
+          "/api/": "https://net.fucer.com.ar",
+        }
+      : {},
 
   auth: {
     strategies: {
