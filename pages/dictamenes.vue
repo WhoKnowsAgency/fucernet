@@ -7,11 +7,35 @@
         <div class="normativas-container dictamenes">
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 4/2022</h5>
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://net.fucer.com.ar/normativa/859/dictamen-can-n%C2%BA42022"
+                >
+                  El artículo 375 del CCyCN se aplica también a los poderes
+                  realizados durante la vigencia del anterior Código Civil de la
+                  Nación
+                </a>
+              </h4>
+              <p>
+                Un poder para dar el asentimiento conyugal debe contar con la
+                identificación del automotor requerida por el artículo 375 del
+                CCyCN, incluso cuando el instrumento se hubiere otorgado durante
+                la vigencia del anterior Código Civil de la Nación.
+              </p>
+            </div>
+            <div class="extra">
+              <small><a>10/06/2022</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h5>Dictamen CAN Nº 3/2022</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/852/dictamen-can-n%C2%BA-32022"
                 >
-                  Dictamen CAN Nº 3/2022
+                  El artículo 976 del CCyCN y la Solicitud Tipo 08
                 </a>
               </h4>
               <p>
@@ -30,11 +54,12 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 2/2022</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/837/dictamen-can-n%C2%BA-22022"
                 >
-                  Dictamen CAN Nº 2/2022
+                  Cesión de factura en el marco de una inscripción inicial
                 </a>
               </h4>
               <p>
@@ -52,11 +77,13 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 1/2022</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/827/dictamen-can-n%C2%BA-12022"
                 >
-                  Dictamen CAN Nº 1/2022
+                  El ingreso de un trámite en la futura radicación no genera
+                  prioridad
                 </a>
               </h4>
               <p>
@@ -76,11 +103,13 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 9/2021</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/792/dictamen-can-92021"
                 >
-                  Dictamen CAN Nº 9/2021
+                  Supuestos que no implican notificación personal de una
+                  observación
                 </a>
               </h4>
               <p>
@@ -100,11 +129,13 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 8/2021</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/786/dictamen-can-82021"
                 >
-                  Dictamen CAN Nº 8/2021
+                  Análisis de las principales peticiones judiciales que se
+                  encuentran exentas de pago de arancel
                 </a>
               </h4>
               <p>
@@ -120,11 +151,14 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 7/2021</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/762/dictamen-can-n%C2%BA-62021"
                 >
-                  Dictamen CAN Nº 7/2021
+                  Divorcio: Validez de un acuerdo privado de adjudicación, a los
+                  fines de realizar una transferencia por liquidación de la
+                  comunidad conyugal
                 </a>
               </h4>
               <p>
@@ -144,11 +178,13 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 6/2021</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/762/dictamen-can-n%C2%BA-62021"
                 >
-                  Dictamen CAN Nº 6/2021
+                  Las U.T.E. y los fideicomisos no pueden ser titulares de
+                  automotores
                 </a>
               </h4>
               <p>
@@ -165,11 +201,13 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 5/2021</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/759/dictamen-can-n%C2%BA-52021"
                 >
-                  Dictamen CAN Nº 5/2021
+                  Certificación de firma realizada por un notario exranjero, en
+                  una Solicitud Tipo
                 </a>
               </h4>
               <p>
@@ -185,11 +223,13 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 4/2021</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/748/dictamen-can-n%C2%BA-42021"
                 >
-                  Dictamen CAN Nº 4/2021
+                  Reinscripción de prenda o medida cautelar, pese a la
+                  existencia de un certificado de dominio vigente
                 </a>
               </h4>
               <p>
@@ -209,9 +249,11 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 3/2021</h5>
               <h4 ref="pageFocusTarget">
                 <a href="https://net.fucer.com.ar/normativa/735/dictamen-32021">
-                  Dictamen CAN Nº 3/2021
+                  ¿Qué facultades requiere el apoderado para peticionar la baja
+                  del automotor?
                 </a>
               </h4>
               <p>
@@ -228,11 +270,13 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 2/2021</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/723/dictamen-22021-de-la-comision-de-asuntos-normativos-de-la-aaerpa"
                 >
-                  Dictamen CAN Nº 2/2021
+                  Cómo registrar la transformación de un embargo cautelar, en
+                  uno ejecutorio
                 </a>
               </h4>
               <p>
@@ -250,11 +294,13 @@
           </article>
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 1/2021</h5>
               <h4 ref="pageFocusTarget">
                 <a
                   href="https://net.fucer.com.ar/normativa/714/dictamen-n%C2%BA-12021-de-la-comision-de-asuntos-normativos-de-la-aaerpa"
                 >
-                  Dictamen CAN Nº 1/2021
+                  Fallecimiento del cónyuge que dio su asentimiento, antes que
+                  firme el adquirente la ST 08
                 </a>
               </h4>
               <p>
