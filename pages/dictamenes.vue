@@ -7,6 +7,30 @@
         <div class="normativas-container dictamenes">
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 5/2022</h5>
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://net.fucer.com.ar/normativa/865/dictamen-can-n%C2%BA-52022"
+                >
+                  Recaudos mínimos a tener en cuenta para el ingreso de un
+                  trámite ante un Registro Seccional
+                </a>
+              </h4>
+              <p>
+                Los recaudos mínimos a tener en cuenta en la mesa de entradas
+                para el ingreso de cualquier trámite son: 1) La identificación
+                del peticionante o bien, del presentante; 2) Presentar o en su
+                caso completar y firmar, una Solicitud Tipo o un formulario; 3)
+                Abonar el arancel establecido por la Resolución Ministerial
+                vigente.
+              </p>
+            </div>
+            <div class="extra">
+              <small><a>11/07/2022</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
               <h5>Dictamen CAN Nº 4/2022</h5>
               <h4 ref="pageFocusTarget">
                 <a
