@@ -7,6 +7,28 @@
         <div class="normativas-container dictamenes">
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 6/2022</h5>
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://net.fucer.com.ar/normativa/873/dictamen-can-n%C2%BA-62022"
+                >
+                  Se puede expedir nuevo certificado de dominio, estando vigente
+                  uno anterior
+                </a>
+              </h4>
+              <p>
+                De ser así peticionado, es procedente expedir uno o más
+                certificados de estado de dominio, incluso estando vigente otro
+                u otros. Ello no implicará una renovación de la reserva de
+                prioridad.
+              </p>
+            </div>
+            <div class="extra">
+              <small><a>16/08/2022</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
               <h5>Dictamen CAN Nº 5/2022</h5>
               <h4 ref="pageFocusTarget">
                 <a
