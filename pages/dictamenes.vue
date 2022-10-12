@@ -7,6 +7,27 @@
         <div class="normativas-container dictamenes">
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 7/2022</h5>
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://net.fucer.com.ar/normativa/881/dictamen-can-n%C2%BA-72022"
+                >
+                  No se debe expedir duplicado del Título Digital
+                </a>
+              </h4>
+              <p>
+                No corresponde expedir un ejemplar DUPLICADO cuando el Título
+                del Automotor sea un documento digital, emitido de acuerdo a lo
+                establecido en la disposición DN N°393/2017, debiendo
+                peticionarse en cambio, un recupero de C.A.T..
+              </p>
+            </div>
+            <div class="extra">
+              <small><a>19/09/2022</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
               <h5>Dictamen CAN Nº 6/2022</h5>
               <h4 ref="pageFocusTarget">
                 <a
