@@ -8,6 +8,18 @@
           <article class="normativa-module">
             <div class="main">
               <h4 ref="pageFocusTarget">
+                <a href="https://bit.ly/fucernet-suplemento-31" target="_blank">
+                  Suplemento Registral Nro. 31
+                </a>
+              </h4>
+            </div>
+            <div class="extra">
+              <small><a>Diciembre 2022</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
                 <a
                   href="https://cdn.mc-weblink.sg-mktg.com/weblink/MTY2NzkxNDMzMnxDNzVHSzhEazNNMkwxRnR0VEI4TEw0WGw4QzNRMGpGQWNzdE9RNjVRQ1gzeUJfYjBnQU9ZV01jMm5QR2g5emRSRGl0anNlX3AxblFIWTdmQlktXzVuS0VwYlk2bkdfUWw4S3pnNDktX3N0UEFfWldlSXo1eE53Y0xmMU1kMk9vY3J0ZGs5djJHSlNnUWZReXU1VWRGUEVxWG5pZExfTEwzSXhQU2wzM3djR0NSYlhIMng4ZjRZV3NYOG43dmZGTVVoS1duY0ZHU2lyWlA2aENKaXBxUTRUMTZfZEw0VHNSR1NsZUlRX2pKXzRHclk3T1pqMG1nbGMzTlJBYmVfRkJja1RrSDg5VjZiTEVISU1WaEdzejU4RHVvbFZGeF91bnlCT3dWUk00R1RZazhRYjI5U2lrWGozSWNucTRVVWpYNFBhSnlYcUZkVVhGR2ZqWnNlR3VFbkxIenhlSERhZz09fHlXR5RpDMMFFZdCs-hTiuI7UJ-F3aPXeaI23c5EvPBl"
                   target="_blank"
