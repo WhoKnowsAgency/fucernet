@@ -7,6 +7,60 @@
         <div class="normativas-container dictamenes">
           <article class="normativa-module">
             <div class="main">
+              <h5>Dictamen CAN Nº 2/2023</h5>
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://net.fucer.com.ar/normativa/913/dictamen-can-n%C2%BA-22023"
+                >
+                  Rectificación de datos ante la extinción de la comunidad
+                  conyugal con efecto retroactivo.
+                </a>
+              </h4>
+              <p>
+                Si una persona adquirió un automotor mientras estaba casado,
+                pero luego se dicta sentencia de divorcio vincular con efecto
+                retroactivo a una fecha previa a esa inscripción, podrá
+                solicitar se modifique el estado civil y carácter del bien,
+                peticionando el trámite de rectificación de datos previsto en el
+                Título II Capítulo XV Sección 2ª del Digesto.
+              </p>
+            </div>
+            <div class="extra">
+              <small><a>14/03/2023</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h5>Dictamen CAN Nº 1/2023</h5>
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://net.fucer.com.ar/normativa/906/dictamen-can-n%C2%BA-12023"
+                >
+                  El modelo año y su rectificación mediante nota
+                </a>
+              </h4>
+              <p>
+                Un automotor que se ha nacionalizado o fabricado en enero 2023
+                -o en un mes posterior-, y de haberse consignado en el
+                respectivo certificado “modelo año 2022”, no se lo puede
+                rectificar a 2023 mediante la declaración jurada indicada en la
+                Circular D.N. Nº 22/2022, ya que está fuera del rango temporal
+                aplicable a la indicada norma (01/04/2022 a 31/12/2022).
+                Entendemos que ante dicho supuesto, de pretender que sea
+                considerado como modelo año 2023, deberá el interesado gestionar
+                el respectivo trámite ante la empresa terminal o autoridad
+                aduanera para que, de corresponder, se emita un nuevo
+                certificado que indique el correcto modelo año, sin que ello
+                pueda ser rectificado mediante la simple declaración jurada ante
+                el Seccional.
+              </p>
+            </div>
+            <div class="extra">
+              <small><a>02/02/2023</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
               <h5>Dictamen CAN Nº 7/2022</h5>
               <h4 ref="pageFocusTarget">
                 <a
