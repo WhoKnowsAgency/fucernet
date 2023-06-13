@@ -8,6 +8,51 @@
           <article class="normativa-module">
             <div class="main">
               <h4 ref="pageFocusTarget">
+                <a
+                  href="https://cdn.mc-weblink.sg-mktg.com/weblink/MTY4NTk2MjgzOHw5NlFIaEhJaFl6WDNxTFpPeWdFYmw4LUhyY05ZaTN2eXRiRTNzQUR5ZnpjdVVBV2JURkotWVpHWVJHVjJKRjVqZ1hQMUhCd1NGRG1qOHFVcWdyd01uT1JPN00yb3Q0cDF6TElOaVdMV1hiSUZURGlTVHRJLWQxaGp1Tnp4QzhCM0p2ZjBOclJ3NHpvdFZsMF9abFlEM2M2VTlyc2pVd3hQa0MtZFdYTWl4dUtNc0ZSY0ZhcGlCVEcwclkwYWVMWXpvUHpLNkE4cjIzclE2cm9PazRvUmJwUVNROFY3Vnl5aW56dXpYanVoMFRuckg0eHdKdl9aWlBrbHRnYlJkRHBQeGNHa0ZjU0kxZzdUZzBWOG9IVnF1SVhTU2FTOUx4WXF5NUFvckJuTEFFQjBKZXozQlQtZEFCXzd3R1VnbU90ZzB5eFpQTFk2SzhxbEdHcmRZMTVXbEFNb0FwejdsZz09fKQoKqwmPcc6R8XjgT4YDMx-kDqPhlJCa5ReDs7pIkW5"
+                  target="_blank"
+                >
+                  Suplemento Registral Nro. 37
+                </a>
+              </h4>
+            </div>
+            <div class="extra">
+              <small><a>Junio 2023</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://cdn.mc-weblink.sg-mktg.com/weblink/MTY4MzAyNTI1MHw1eFFWamVDMWY2cVVHaDRKNldzWS1La05KbC1vejFXcTVDeXIyOTZIN0N5bjVFYU9mUHc3ZmpjaGZUcEI1YS1hN282Q3cwSjlMTS0zdl8zbXl1MWFtd29KRFhfNTRadmdXXzJUMWhXelBYWjg3bzduNnd0eVNMM2pWbEtYVTI3XzFfQ0pPeFo0Tzg0bmcwdzJpMm5nellxVXR0WXhBS2d5Z1VSbktCd0tWNGlCSlcwUEJIeHRzNWdvdEc3dTdkMjB3NzZvRFVEeVM5enlMLWppR2p3UFR1WndjSUswQ2UtamhDak9WbkJuTGNiZVRwV09jcHY3NDZWcjFqQldnRTlGejlUczB3ZFZTMkZ2dFVCUENlYjg0NURQbjZObkdmYTNJVWthaHNvZl9vRWFCRlhmTkVMZlZraXJBSmFJMnN0dGlON2hSSWEzR281REVHVjNNZFVvWklxMDV0UDJmdz09fGak5sl5ow-kEW5lSJycXlDdHW86kW8Lou5gpThNxdZ8"
+                  target="_blank"
+                >
+                  Suplemento Registral Nro. 36
+                </a>
+              </h4>
+            </div>
+            <div class="extra">
+              <small><a>Mayo 2023</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://cdn.mc-weblink.sg-mktg.com/weblink/MTY4MDUxOTY0MHxyb3hfU0JZeFlWdVU3V0VHZzlxMGlzODl4SzBOUW13Mi1TMFFpWG12QmdYc2k0Z3NOUGZCbFpjR2tORXExM2xVTlFhVTZmZWZUcUFvNEg2dGVYMVpCRXE3R3BGZEZHUHlnbWwyX084VG94NW1HVzZjVERGRWxWVjU2T0tZdUw2aC1IN01tblNFYXdfbUdfWnRuWWFyNTJEcU82LUdlQzdkNDg1M0c3STM0VFFOMkJFYzVEdC1XZTR0NlVzSk1mWVJYcDVKRXpMVV9YeWswdjJwNGNmdlFsZ0ViMHp2MTl0TkNtUWppQzdKdlBxejdndUVPc2VJUURIeWxHQm9Lclh5NkRZTGRIVHp4T1lDaVFKQjJpU3lwblA3b1lMR0dCTnZ3SDJtRV9paE45YVdCMTM5cFdrbWtwWmk5TnZ5dFoxaTFKdVRUdXl0ekdoXy1xVjU2SGhrWXR5YVduRlo0UT09fMUfcv4GyW7cpregRlCQrCR5lasK1VE4RF_WqC1E74w2"
+                  target="_blank"
+                >
+                  Suplemento Registral Nro. 35
+                </a>
+              </h4>
+            </div>
+            <div class="extra">
+              <small><a>Abril 2023</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
                 <a href="https://bit.ly/fucernet-suplemento-34" target="_blank">
                   Suplemento Registral Nro. 34
                 </a>
