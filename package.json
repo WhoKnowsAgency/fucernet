@@ -4,6 +4,9 @@
   "description": "Consulte el contenido de la normativa aplicable a la registración de automotores",
   "author": "Fucer",
   "private": true,
+  "engines": {
+    "node": ">=14.0.0 <15.0.0"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
