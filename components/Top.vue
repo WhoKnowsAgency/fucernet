@@ -126,10 +126,7 @@
               </nuxt-link>
             </li>
             <li>
-              <a
-                href="https://www.dnrpa.gov.ar/Digesto-Automotor/digesto.php"
-                target="_blank"
-              >
+              <a href="https://www.dnrpa.gov.ar/nuevodigesto" target="_blank">
                 Digesto
               </a>
             </li>
