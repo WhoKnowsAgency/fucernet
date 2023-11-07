@@ -89,7 +89,7 @@ export default {
         },
         {
           urlPattern:
-            "^https://((www.)?fucer.com.ar/app|net.fucer.com.ar)/cms/.*",
+            "^https://((www.)?fucer.com.ar/app|net.fucer.com.ar)/cms/(images|resources)/.*",
           handler: "cacheFirst",
           strategyOptions: {
             cacheName: "fucer-cms",
