@@ -130,9 +130,10 @@
       <div class="container">
         <div class="footer-cta">
           <h2>Acceda a FucerNet de forma gratuita durante 15 días</h2>
-          <p>
-            Nuestro plan mensual tiene un costo de $750 (a partir del 1/7/20) y
-            puede cancelarlo en cualquier momento.
+          <p style="font-size: 18px">
+            Nuestro plan mensual tiene un valor de
+            <strong style="color: black; font-size: 22px">$1400</strong> y puede
+            cancelarlo en cualquier momento.
           </p>
           <nuxt-link
             :to="{ name: 'seleccione-su-plan' }"
@@ -150,7 +151,7 @@
               src="~/assets/img/logo-fucernet.svg"
               alt="FucerNet"
             />
-            <span>2020 - Fundación Centro de Estudios Registrales</span>
+            <span>2023 - Fundación Centro de Estudios Registrales</span>
           </div>
           <div class="footer-info_menu">
             <ul>

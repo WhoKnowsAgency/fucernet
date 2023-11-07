@@ -71,7 +71,7 @@
               <div class="main">
                 <h4>
                   <a
-                    href="https://www.dnrpa.gov.ar/Digesto-Automotor/digesto.php"
+                    href="https://www.dnrpa.gov.ar/nuevodigesto/"
                     target="_blank"
                     >Digesto de Normas Técnico Registrales</a
                   >
@@ -116,7 +116,7 @@
               <div class="main">
                 <h4>
                   <a
-                    href="https://drive.google.com/file/d/1inIpNzJuv3W1KT709H03_oPnPAnEH0tw/view?usp=sharing"
+                    href="https://www.dnrpa.gov.ar/Rinof-2020/Rinof.php"
                     target="_blank"
                     >RINOF - Reglamento Interno de Normas Orgánico
                     Funcionales</a
