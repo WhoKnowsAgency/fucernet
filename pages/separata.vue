@@ -9,6 +9,22 @@
             <div class="main">
               <h4 ref="pageFocusTarget">
                 <a
+                  href="https://net.fucer.com.ar/cms/resources/files/separata-fucernet-2023.pdf"
+                  target="_blank"
+                >
+                  Resumen de Normas
+                </a>
+              </h4>
+              <!-- <p><a href="">bajada</a></p> -->
+            </div>
+            <div class="extra">
+              <small><a>Año 2023</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
                   href="https://net.fucer.com.ar/cms/resources/files/separata-fucernet-2022.pdf"
                   target="_blank"
                 >

@@ -9,6 +9,66 @@
             <div class="main">
               <h4 ref="pageFocusTarget">
                 <a
+                  href="https://cdn.mc-weblink.sg-mktg.com/weblink/MTcwNzEzMDgyN3xnUVMxQlR5cWQ5RWxGWEVNZDBnSkF4UTY0b3VncVFqeVVIWUU5SFB5clNNYnZkZWRKR0p3al9iZ0xreHBqMWRsOU9SUmRIcEZ4cGN3Vnc3dVpDdmpXWU13cnhfZWtQOFdlUGdqQ1J6NzNoSl91RGxfcEctS3RuZUpNVXlUOTQwT3NRbFU2ZFBkRVFERGR2XzBXeFNGXzVPQTQxTjFWMFZZRGM0QV9mN3dUVTROa2FkRjBzaEdDR1U2VnN0R1BfbFA1dVIwWGp6Yk5pX3o2OXl5NGxjRVlWWDR4VVo2bjFrbzRTRUpUZnVnRWR3YjRYbFBkdkRBQ243c01NX1MyTUs4N0E1czFnOF84dGVjLVZxUjRNaTF3QXpMRk94N0RyamhhcDgyalFUd0NaZDk5ZnBQRC1Ca2xZbkM2MUVXRFZrZlpZaExFZGJoalVpbHN4MDgzcUg2b2VYNUxGZkpxUT09fP2C9jA_wtJJSmeUZ9NkQU0WHngzdyRQTN9W077G-uhz"
+                  target="_blank"
+                >
+                  Suplemento Registral Nro. 45
+                </a>
+              </h4>
+            </div>
+            <div class="extra">
+              <small><a>Febrero 2024</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://cdn.mc-weblink.sg-mktg.com/weblink/MTcwNDE5MzIyMXxhUk5PTmpWYUZPSmwyWEdVYS1fbGMxODU4cmhwZk9CcENuR1JQcGM0NE8wTHJUMjFUZkloRmc3dklnMGRFRkJfZ3NXODgza21HeTRYbk5DcHdpRm5Lc0lkMFRtUmh6aS1nekxzcldvc3M5VzV2WFpQdE90Z1Z6T1JiaFYxT1dTZHFtcF90TERfcU1QV0JCVzZVWXJXM3NPaDE1dmUwbWxnRkg4Y09xdEN2RjlSa1RoUUc5bXRCNUw3Tk1ManpnTkJzdXB2MXJKS3k5ZVFNQmlGQ2VGcUtqbGV4cmh3RGNvTGlYQjllYlNLeGROekN1UFdMX1RJVnNuOHBXb2dkekZWZFQyaGk1V3M1bmltcVNJa3ppWDNRNlFXRVY2LU5xWFI3b2FDemh0TEd5cmJ0NnloR1hKN19HZEYwS09MVlJzZ1NxZ0FpV01YLWMwN0p3YVFwektvNUtpYUxjZmdFZz09fF5Mryp4Z-fFpE4-siixTmvAbTN6GzvMNLNBlclY48kq"
+                  target="_blank"
+                >
+                  Suplemento Registral Nro. 44
+                </a>
+              </h4>
+            </div>
+            <div class="extra">
+              <small><a>Enero 2024</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://cdn.mc-weblink.sg-mktg.com/weblink/MTcwMTY4Nzk4MXxYWUhidHJrT0tDOVFJT25md3JDa0FmZ3NSNXFCMnlCbnZKRGFNeWt5Q3NBX1ZtbXlfQjVDdGdxVDR5N0c2czlubXJHTHJqdkhCb256NlRucjRMOUpiWHdTTWVrbUl5RUxaME1kWmxTUjBOenoybjNzdjVmcWtsVjZSTng4TlgySDRHeWdDdGM4OVRaSGtsWDNkcnFGMjVvSkdnNko4bVNrNkpNWHhBN1JraHJLTDFGcXFkdkowX0Y3YXh1ZUMzRVlhQUhDanJjZVVIZUpkbWRlS25ub2ZzOWNSVlhVNkw0RmVxdXhMR0x6UkozeWYtemNPTm5kZnpPeVF1ZXBzWWEyd2hmeWQwWjV6Tmw4QU1PZHVkMFpTcDRHUnE2UGR3MVVyRWxXbGlVUC1RVHpiOWhmMVE0ZnRPS0p4UG5fcHptdmVOa1dVeWcxWWRvWV9wb0tGYjJUWEw2c0VYal93QT09fCJH1tVuCtUbHZCMCTL8C4bWZbxTA0lJGiOILt6ieV97"
+                  target="_blank"
+                >
+                  Suplemento Registral Nro. 43
+                </a>
+              </h4>
+            </div>
+            <div class="extra">
+              <small><a>Diciembre 2023</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
+                  href="https://cdn.mc-weblink.sg-mktg.com/weblink/MTY5OTI2ODQxMnxXZnJaNHZaLUNLVk8zb0JLalZtS2FEaFZXakhNYllsX0d4dTRfcEFZeFpaRVJ3RkxqTHBEanV2ci1BSnMtc215d1hKTzhGblBxR2xyMXdWV3c3by1iTmVKVW92WlJPMU1OSDBrQnpQQkFOQ2wtVzdVMGJfRS12bF8weW9weXFBaVdHaDlyaGpGb0lPYWRCUDdmRFFWWWJPRWc2Nm1DZDVyS2ZNcVRXNl9QUFQ2eHNPdTdDYm9JYmhHbGVBa0ctODFya25aNE0wUHV3bTYwU1JfNDFYRUs4a1pXVnNEd0NHdXdPSjJKT3l3elRSMlExbXBTOEtTSTlxemZCdnJ4R1hmeS1TeEw4VWRFaEV4WENTOVlJT3lmbC1lZkVVNVVvTG5LUUozUlRmX2V1Tm9ueWh4d25iSHljbHpHSF9UY2lmYVdib2YyNGNtaUM0NGtVVmdLbExIcDB2Y0Q2cDZfQT09fKhcohaVyGp5Pv5GCukkfQYNPgXcuVxeL1j7RUnny-3K"
+                  target="_blank"
+                >
+                  Suplemento Registral Nro. 42
+                </a>
+              </h4>
+            </div>
+            <div class="extra">
+              <small><a>Noviembre 2023</a></small>
+            </div>
+          </article>
+          <article class="normativa-module">
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a
                   href="https://cdn.mc-weblink.sg-mktg.com/weblink/MTY5NjI0NDQyMHxhSnd6aExnS3hpVjB0MjJ2eFRnWFlrUnNfdWJtT3BmSTF5aHhhZnhVdUlPTWp0TVFraXdzU2FKbDBJRElWemdEMlp2bW0yYm1lYWpXeld0Y280THVld0ZHYlROVG9TWXc1R2R3VVVxUURmTllPcmRVUGZaNW90NnlpUlhYci1ONDZETkNMeUJMSnlLdUM4LWk5YVV0Mm1aLWdBbDZlNHliQS1YUVJuNkVWbnN6RVNWYVV2bHRZa0dTT04tbmdLWTlqZW5wWmU2Vnlka0N3WkxoZUxuREhWeENQaFNKcGRvVXV4U2JIaXNBVENqYVYxMnRHY2szcVZ1STdmeWtGZ2h1RUlOX25FTHk5YUlpczNLVzlkVXpPZFFFSXJGVHFNbHpiay0xaEZFeW9PaHU1alczZTN5cllQRW9mZmNNSld3cXlmdzRFLUhUZmlNTFdqWFRFRXB5UmpyVWNBZWxNdz09fEuqouca3JMZLO6RrKSWSeshwhFqhsHECu1X4z-grvbr"
                   target="_blank"
                 >
