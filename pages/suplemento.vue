@@ -5,6 +5,22 @@
     <main id="contenido" class="band">
       <div class="container">
         <div class="normativas-container">
+          <article
+            v-for="suplemento in suplementos"
+            :key="suplemento.titulo"
+            class="normativa-module"
+          >
+            <div class="main">
+              <h4 ref="pageFocusTarget">
+                <a :href="suplemento.enlace" target="_blank">
+                  {{ suplemento.titulo }}
+                </a>
+              </h4>
+            </div>
+            <div class="extra">
+              <small>{{ suplemento.mes }}</small>
+            </div>
+          </article>
           <article class="normativa-module">
             <div class="main">
               <h4 ref="pageFocusTarget">
@@ -649,6 +665,29 @@ export default {
   data() {
     return {
       title: "Suplemento Registral",
+      suplementos: [
+        {
+          titulo: "Suplemento Registral Nro. 48",
+          enlace:
+            // eslint-disable-next-line no-secrets/no-secrets
+            "https://cdn.mc-weblink.sg-mktg.com/weblink/MTcxNDk5MzIyMHxkZ2M3aEVDbms1d2lQUHBuRW15VDRJT2N6UnFxd2g4dnlYa1F2QTZKOHBwZDFzd29oRjhLTFFKcWVfeFBvMlRsNHpxVlZEU0F3cm55bThEamMzMGNFMVRfdlkyTTdBT0ZPOXpQZzc3bjdSZjhsa2JKRW1XUThWYUVkVEhuby14N0lXc0YtYmktako2N0xSZUl3c2dYQThXRmJ0XzJCS2pZY3RzaXBCU1hIUzlSMHF6cWxaUFFBQTdjTlRmeC1SOWhMVmx1OVJsT011VnRXcWp3NXFGNk5SZmVVTkJvLXdYbGI2emxVSVVwa3JEVXMyMlpheWFqUHFCLUphUW4zWHh5ak96XzlCWkFNQTV3NGx6X09QZV9UT2dpaHBlbV9iTDRPbTdSOVhPdURTd0VEc3dOSHNZeUd2dm45MnNQdFVBelBBWDBTakVjeXlWSGNYTE9feUs1enBDanFnN185QT09fO2meQ7udIDMU93546vuZFMqMbkH7o9YuHQLEhCpJYBx",
+          mes: "Mayo 2024",
+        },
+        {
+          titulo: "Suplemento Registral Nro. 47",
+          enlace:
+            // eslint-disable-next-line no-secrets/no-secrets
+            "https://cdn.mc-weblink.sg-mktg.com/weblink/MTcxMjE0MjAzNnxMUlZFM1hqMUJKT1h4VUg5NDBmYUFuLUF1ckI3TTQtNnkxRWZxbnBkZTkybk9pc1NFYTdMZ2ZrSURrcllFT3hxSjNwRG9OY2FZSThqbHRRSi1uNjZvNkh3Wm12T1NyUlQzakpoYk45VzN5d3pBNnJaVmRhLTBhT2wwQ3BTdk9QSFN2U0R5bE1xM20yVU5PemdYSURwQlZuaDhNWUNwV2htXzU2UzRFTUpiQnNZTWVyanI3MXJoZlctN2k0TDUtRzZYaGQ2d0xEeXd3OGs2UTNpM0dqNllweXJDVTRNM2JxVHNfYXNMaVl0V0pxc3RaZzN6NHRfYzhsalFpTUZHbENUZ1JUQjdxZmdFZmhQaWVHcC1Wdm81cE4tOU5jZEtDR21VZ0phdE9xSjhhdDN1RXNnWm5iLTdKN3Y0Z2RNcG94VmkyWkpsM3FUOGFTOEVXUm0wQUxMQUM2X2NuajF2QT09fHprYqhbwQZq1ki0fSrE1vBTWlaVLESD6Z6BO6CVovEQ",
+          mes: "Abril 2024",
+        },
+        {
+          titulo: "Suplemento Registral Nro. 46",
+          enlace:
+            // eslint-disable-next-line no-secrets/no-secrets
+            "https://cdn.mc-weblink.sg-mktg.com/weblink/MTcwOTU1MDA0MXw3LTc3UFdMTGpCU3Bjb01oOXlkbWxJQ1VzNTJPOTloT19BQ0FQSlhIMDFpVUdNWjZ6TVNkc0FXN1NUVHZEbFVGWHBwM1dqOHpGZ1VmS3Z0d1dFOHlDQ1Q0VFZ2cmJwRkUxenR6dzl0aC1iSzcxWl9jREJobVFTeU1iM1k0ZVkzZzdfUzF5RkNpOFZ4VVJWbDdtTXpkOWR6Z3QtMlItbExDczl1Q0xtamxhOE9DakNfRHB5bi1xQUdodm1UbGcxUlhwQjIzLUZpWVlHbXgxM0c5eVR2RXJ1SEtXQzdQWF84dDlyYndieXpKSEljTXgtaGxLUXhnSGVxR0NKNWtnRVN2dURnUnJidy1vV3U1eXI4WVdEbkZQS3dGbkVzTlFJUldGb2JGWklzbEhpQ3BuQnRxbVBadE1kOWl1clFneW53OEFlcjBTQWlCVDZXd0lWQ3BMaWw3cUpEVFA4QnJ2dz09fGK13osiujFBEV2ZjgMjD3jZ9YiXyPvD16lTYiOCjFvP",
+          mes: "Marzo 2024",
+        },
+      ],
     };
   },
 
