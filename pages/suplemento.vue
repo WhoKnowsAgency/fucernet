@@ -4,16 +4,16 @@
     <Top :title="title" />
     <main id="contenido" class="band">
       <div class="container">
-        <div class="normativas-container">
+        <div ref="pageFocusTarget" class="normativas-container">
           <article
-            v-for="(suplemento, indice) in suplementos"
+            v-for="suplemento in suplementos"
             :key="suplemento.titulo"
             class="normativa-module"
           >
-            <div class="main" ref="pageFocusTarget">
+            <div class="main">
               <h4>
                 <a :href="suplemento.enlace" target="_blank">
-                  {{ indice }}{{ suplemento.titulo }}
+                  {{ suplemento.titulo }}
                 </a>
               </h4>
             </div>
