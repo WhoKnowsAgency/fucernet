@@ -5,7 +5,7 @@
   "author": "Fucer",
   "private": true,
   "engines": {
-    "node": ">=14.0.0 <15.0.0"
+    "node": ">=16.0.0 <17.0.0"
   },
   "scripts": {
     "dev": "nuxt",
@@ -50,11 +50,13 @@
     "vue-toasted": "^1.1.28"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
     "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@vue/eslint-config-prettier": "^6.0.0",
     "axe-core": "3.5.3",
     "babel-eslint": "^10.1.0",
+    "browserslist": "^4.21.0",
     "cypress": "^4.9.0",
     "cypress-audit": "^0.2.1",
     "cypress-axe": "^0.8.1",
@@ -75,7 +77,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
     "eslint-plugin-vue-a11y": "0.0.31",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.1",
     "nuxt-purgecss": "^1.0.0",
     "pre-commit": "^1.2.2",
     "prettier": "^2.0.5",
