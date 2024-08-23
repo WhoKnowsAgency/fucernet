@@ -26,3 +26,5 @@ cypress/videos/*
 
 .DS_Store
 DS.Store
+
+.vscode
