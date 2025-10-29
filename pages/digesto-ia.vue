@@ -6,7 +6,7 @@
       <div class="container">
         <div ref="pageFocusTarget">
           <iframe
-            :title="titlel"
+            :title="title"
             src="proximamente.html"
             frameborder="0"
           ></iframe>
@@ -31,7 +31,7 @@ export default {
   middleware: "premium",
   data() {
     return {
-      title: "Café virtual",
+      title: "Digesto IA",
     };
   },
   beforeRouteEnter(to, from, next) {

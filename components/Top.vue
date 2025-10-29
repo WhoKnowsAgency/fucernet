@@ -95,6 +95,14 @@
             </li>
             <li>
               <nuxt-link
+                :tag="$route.name === 'digesto-ia' ? 'span' : 'a'"
+                :to="{ name: 'digesto-ia' }"
+              >
+                Digesto IA
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link
                 :tag="$route.name === 'suplemento' ? 'span' : 'a'"
                 :to="{ name: 'suplemento' }"
               >
