@@ -101,7 +101,7 @@
                 Digesto IA
               </nuxt-link>
             </li>
-            <li>
+            <li class="with-hr">
               <nuxt-link
                 :tag="$route.name === 'suplemento' ? 'span' : 'a'"
                 :to="{ name: 'suplemento' }"
@@ -125,7 +125,7 @@
                 Separata Anual de Normas
               </nuxt-link>
             </li>
-            <li>
+            <li class="with-hr">
               <nuxt-link
                 :tag="$route.name === 'configuracion' ? 'span' : 'a'"
                 :to="{ name: 'configuracion' }"
