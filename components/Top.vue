@@ -87,6 +87,14 @@
             </li>
             <li>
               <nuxt-link
+                :tag="$route.name === 'consultas' ? 'span' : 'a'"
+                :to="{ name: 'consultas' }"
+              >
+                Consultas
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link
                 :tag="$route.name === 'cafe-virtual' ? 'span' : 'a'"
                 :to="{ name: 'cafe-virtual' }"
               >
