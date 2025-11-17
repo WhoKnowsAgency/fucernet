@@ -10,8 +10,12 @@
               ? `Tenés ${consultasDisponibles}`
               : "Ya no tenés"
           }}
-          consultas disponibles este mes para enviar al equipo de FucerNet.
-          <br /><br />
+          {{
+            consultasDisponibles === 1
+              ? "consulta disponible"
+              : "consultas disponibles"
+          }}
+          este mes para enviar al equipo de FucerNet. <br /><br />
 
           Recibirás una respuesta vía mail a <b>{{ $auth.user.email }}</b
           >.
@@ -99,7 +103,7 @@ export default {
     return {
       title: "Consultas",
       consulta: "",
-      consultasDisponibles: 2,
+      consultasDisponibles: 0,
       status: "idle",
     };
   },
@@ -118,6 +122,17 @@ export default {
       }
     });
   },
+  async created() {
+    this.setPaginaCargando(true);
+    try {
+      const { disponibles } = await this.$axios.$get("consultas");
+      this.consultasDisponibles = disponibles;
+    } catch (e) {
+      this.consultasDisponibles = 0;
+      console.error(e);
+    }
+    this.setPaginaCargando(false);
+  },
   methods: {
     ...mapActions(["setPaginaCargando"]),
     async enviarConsulta() {
@@ -126,17 +141,13 @@ export default {
         return;
       }
       this.setPaginaCargando(true);
-      function delay(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-      }
       try {
-        await delay(1500);
-        // await this.$axios.$post("auth/enviarConsulta", {
-        //   consulta: this.consulta,
-        // });
+        const { disponibles } = await this.$axios.$post("consultas", {
+          mensaje: this.consulta,
+        });
         this.status = "success";
         this.consulta = "";
-        this.consultasDisponibles--;
+        this.consultasDisponibles = disponibles;
       } catch (e) {
         this.setMensaje(e, "error");
       }
