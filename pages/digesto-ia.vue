@@ -52,11 +52,10 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style scoped lang="sass">
 iframe
   width: 100%
   height: calc(100vh - 95px - 60px)
-  border: 1px solid black
   @media(min-width: 480px)
     height: calc(100vh - 61px - 60px)
   @media(min-width: 992px)
