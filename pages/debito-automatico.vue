@@ -12,9 +12,9 @@
         <form method="post" class="main__form" @submit.prevent="suscribir">
           <template v-if="completado">
             <p>
-              ¡Hola, {{ this.$auth.user.nombre }}! Ya puede acceder a sus 15
+              ¡Hola, {{ this.$auth.user.nombre }}! Ya puede acceder a sus 30
               días de prueba. Recuerde que no le cobraremos ningún cargo hasta
-              dentro de 15 días. Si desea cancelar la suscripción antes del
+              dentro de 30 días. Si desea cancelar la suscripción antes del
               primer pago, puede hacerlo desde Configuración.
             </p>
             <br /><br />
