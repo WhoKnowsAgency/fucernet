@@ -20,12 +20,12 @@
           No se preocupe. Cancele antes del {{ diasCancelar }} y
           <strong>no se le cobrará ningún cargo.</strong>
         </p>
-        <nuxt-link
+        <!-- <nuxt-link
           :to="{ name: 'debito-automatico' }"
           class="rounded__btn--full green"
         >
           Débito automático
-        </nuxt-link>
+        </nuxt-link> -->
 
         <nuxt-link
           type="button"
