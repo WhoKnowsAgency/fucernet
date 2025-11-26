@@ -7,7 +7,7 @@
         <div ref="pageFocusTarget">
           <iframe
             :title="title"
-            src="proximamente.html"
+            src="https://primary-production-05b7b.up.railway.app/webhook/3c138e9a-b51d-4c82-b745-7d4c8282c893/chat"
             frameborder="0"
           ></iframe>
         </div>
@@ -55,9 +55,9 @@ export default {
 <style scoped lang="sass">
 iframe
   width: 100%
-  height: calc(100vh - 95px - 60px)
+  height: calc(100vh - 95px - 80px)
   @media(min-width: 480px)
-    height: calc(100vh - 61px - 60px)
+    height: calc(100vh - 61px - 80px)
   @media(min-width: 992px)
-    height: calc(100vh - 111px - 60px)
+    height: calc(100vh - 111px - 80px)
 </style>
