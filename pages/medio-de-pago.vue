@@ -13,19 +13,19 @@
           <small>{{ $auth.user.email }}</small>
         </div>
         <p>
-          Para acceder a sus 15 días gratis, tendrá que suscribirse al plan
+          Para acceder a sus 30 días gratis, tendrá que suscribirse al plan
           seleccionado.
         </p>
         <p>
           No se preocupe. Cancele antes del {{ diasCancelar }} y
           <strong>no se le cobrará ningún cargo.</strong>
         </p>
-        <nuxt-link
+        <!-- <nuxt-link
           :to="{ name: 'debito-automatico' }"
           class="rounded__btn--full green"
         >
           Débito automático
-        </nuxt-link>
+        </nuxt-link> -->
 
         <nuxt-link
           type="button"
@@ -61,7 +61,7 @@ export default {
       title: "Paso 3 - Medio de Pago",
       nroPaso: "3",
       tituloPaso: "Seleccione su medio de pago",
-      diasCancelar: format(addDays(new Date(), 15), "dd/MM/yyyy"),
+      diasCancelar: format(addDays(new Date(), 30), "dd/MM/yyyy"),
     };
   },
   beforeRouteEnter(to, from, next) {

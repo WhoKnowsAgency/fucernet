@@ -14,7 +14,7 @@
           ${{ precioPlan }} mensuales
         </span>
         <small class="plan__recordatorio"
-          >Antes de abonar, usted contará con 15 días gratuitos para probar la
+          >Antes de abonar, usted contará con 30 días gratuitos para probar la
           app</small
         >
         <ul class="plan__specs">

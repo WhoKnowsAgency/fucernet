@@ -401,7 +401,7 @@ export default {
 
         this.titulo = "¡Bienvenido/a, " + this.$auth.user.nombre + "!";
         this.mensaje +=
-          "Su tarjeta fue guardada y ya puede acceder a sus 15 días gratis. Recuerde que no le cobraremos ningún cargo hasta dentro de 15 días.";
+          "Su tarjeta fue guardada y ya puede acceder a sus 30 días gratis. Recuerde que no le cobraremos ningún cargo hasta dentro de 30 días.";
         if (process.client)
           this.$announcer.set(this.titulo + " " + this.mensaje);
       } catch (error) {
