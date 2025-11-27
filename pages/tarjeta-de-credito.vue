@@ -288,12 +288,9 @@ export default {
     },
     isSecurityCodeRequired() {
       let founded = this.paymentMethodSettings.find((config) => {
-        return (
-          this.bin.match(config.bin.pattern) != null &&
-          config.security_code.length == 0
-        );
+        return config.security_code.length > 0;
       });
-      return founded === undefined ? true : false;
+      return founded?.security_code?.mode === "mandatory";
     },
   },
 
