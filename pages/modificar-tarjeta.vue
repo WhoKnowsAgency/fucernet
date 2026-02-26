@@ -93,7 +93,7 @@
             </span>
           </fieldset>
 
-          <fieldset v-show="isSecurityCodeRequired">
+          <fieldset>
             <label for="securityCode">Código de seguridad</label>
             <input
               id="securityCode"
